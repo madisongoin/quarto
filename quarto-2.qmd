@@ -1,0 +1,29 @@
+---
+title: "My Second Quarto Document"
+format: html
+---
+
+
+
+```{r}
+library(tidyverse)
+#| message: false
+```
+
+execute:
+
+```{r}
+#|label: setup
+```
+
+```{r}
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
+  geom_point() +
+  labs(
+    x = "Sepal width (cm)",
+    y = "Sepal length (cm)",
+    color = "Species"
+  )
+```
+
+echo: false
